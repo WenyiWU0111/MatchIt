@@ -273,6 +273,7 @@ process.ratio <- function(ratio, method = NULL, ..., min.controls = NULL, max.co
       if (max.controls <= ratio) .err("`max.controls` must be greater than `ratio` for variable ratio matching")
 
       if (is.null(min.controls)) min.controls <- 1
+      ################################## should be min.controls ################################## 
       else if (anyNA(max.controls) || !is.atomic(max.controls) || !is.numeric(max.controls) || length(max.controls) > 1) {
         .err("`max.controls` must be a single positive number")
       }
